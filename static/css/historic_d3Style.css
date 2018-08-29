@@ -1,0 +1,98 @@
+/* Students:
+ * =========
+ * Add styling to your d3 chart with this file. */
+
+.btn-info {
+
+  background-color: #3f007d;
+
+}
+
+ body{
+  font-size: 20px ;
+  font-family: 'Helvetica Neue',Helvetica,sans-serif !important;
+  background-color: rgb(198,219,239) !important;
+}
+
+.axis-text-x {
+  font-weight: 900;
+  fill: purple ;
+  text-anchor: middle;
+}
+  
+.axis-text-y {
+  font-weight: 900;
+  fill: purple ;
+  text-anchor: middle;
+}
+
+/* #PM10:active {
+  font-weight: 900;
+  fill: #a50f15;
+  transition: fill 0.5s ease-out;
+  text-anchor: middle;
+}
+
+#CO:active {
+  font-weight: 900;
+  fill: #006d2c;
+  transition: fill 0.5s ease-out;
+  text-anchor: middle;
+}
+
+#O3:active {
+  font-weight: 900;
+  fill: #08519c;
+  transition: fill 0.5s ease-out;
+  text-anchor: middle;
+}
+
+#SO2:active {
+  font-weight: 900;
+  fill: #d94801;
+  transition: fill 0.5s ease-out;
+  text-anchor: middle;
+}
+
+#NO2:active {
+  font-weight: 900;
+  fill: #ffeda0;
+  transition: fill 0.5s ease-out;
+  text-anchor: middle;
+} */
+
+.inactive {
+  font-weight: lighter;
+  fill: white;
+  transition: fill 0.5s ease-out;
+  text-anchor: middle;
+}
+
+.axis-text-main{
+ text-anchor: middle;
+ font-size: 0.75em;
+}
+
+.tooltip {
+  position: absolute;
+  width: 300px;
+  height: 125px;
+  padding: 10px;
+  padding-bottom: 80px;
+  font: 12px sans-serif !important;
+  color: white;
+  text-align: center !important;
+  background: #3f007d;
+  border: 0;
+  border-radius: 10px;
+  opacity: .5 ;
+}
+
+#circles:hover{
+  r: 10;
+}
+
+.zoom {
+  fill: none;
+  pointer-events: all;
+}

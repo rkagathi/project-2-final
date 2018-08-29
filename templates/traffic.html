@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chicago traffic and air pollution</title>
+
+  <!-- D3 JS -->
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+  <!-- Leaflet CSS & JS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+
+  <!-- Leaflet plugin slider CSS & JS -->
+  <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <!-- <script type="text/javascript" src="../static/js/SliderControl.js"></script> -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/SliderControl.js') }}"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+
+  <!-- Leaflet plugin marker awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="../static/css/leaflet.awesome-markers.css"> -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/leaflet.awesome-markers.css') }}">
+  <!-- <script src="../static/js/leaflet.awesome-markers.js"></script> -->
+  <script src="{{ url_for('static', filename='js/leaflet.awesome-markers.js') }}"></script>
+  
+  <!-- Our CSS -->
+  <!-- <link rel="stylesheet" type="text/css" href="../static/css/style.css"> -->
+  <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+</head>
+
+<body>
+  <!-- The div where we will inject our map -->
+  <div id="map"></div>
+
+  <!-- API key -->
+  <!-- <script type="text/javascript" src="../static/js/config.js"></script> -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/config.js') }}"></script>
+  <!-- Functions JS -->
+  <!-- <script type="text/javascript" src="../static/js/function.js"></script> -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/function.js') }}"></script>
+  <!-- Stations data -->
+  <!-- <script type="text/javascript" src="../static/js/stations.js"></script> -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/stations.js') }}"></script>
+  <!-- Logic -->
+  <!-- <script type="text/javascript" src="../static/js/trafficSegment24.js"></script> -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/trafficSegment24.js') }}"></script>
+</body>
+</html>

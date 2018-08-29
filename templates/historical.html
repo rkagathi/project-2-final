@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chicago traffic and air quality</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+  <!-- D3 JS -->
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+  <!-- Plotly JS -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  
+  <!-- Our CSS -->
+  <!-- <link rel="stylesheet" type="text/css" href="../static/css/style.css"> -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="navbar-container container-fluid">
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                <a class="nav-link" href="{{ url_for('index') }}">Real-time <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item inactive">
+                <a class="nav-link" href="{{ url_for('historical') }}">Historical</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item inactive align-right">
+                <a class="nav-link" href="https://github.com/TEAbraham/Project-2"><i class="fab fa-github fa-lg"></i><span> Github</span></a>
+                </li>
+            </ul>
+            </div>
+            
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <!-- Content -->
+    <div class="content-container container-fluid">
+        <div class="map-container">
+        <iframe frameborder='0' noresize='noresize' style='position: absolute; background: transparent; width: 100%; height:100%;' src="{{ url_for('historic_index') }}" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="page-footer font-small unique-color-dark">
+
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left">
+
+            <!-- Grid row -->
+            <div class="row mt-3">
+
+            <!-- Grid column 1 -->
+            <div class="col-md-6 mt-md-0 mt-3">
+
+                <!-- Links -->
+                <h4 class="header text-uppercase font-weight-bold">Data Sources</h4>
+                <p class="footer-links">
+                <a href="https://data.cityofchicago.org/Transportation/Chicago-Traffic-Tracker-Historical-Congestion-Esti/sxs8-h27x">City of Chicago data portal</a>
+                </p>
+                <p class="footer-links">
+                <a href="http://aqicn.org/city/usa/illinois/chi_com/">Chicago air quality monitoring stations</a>
+                </p>
+                <p class="footer-links">
+                <a href="https://aqs.epa.gov/aqsweb/documents/ramltohtml.html#rawData_get">United States Environmental Protection Agency</a>
+                </p>
+
+            </div>
+
+            <!-- <hr class="clearfix w-100 d-md-none pb-3"> -->
+
+            <!-- Grid column 2 -->
+            <div class="col-md-6 mt-md-0 md-3">
+
+                <!-- Links -->
+                <h4 class="header text-uppercase font-weight-bold">API</h4>
+                <p class="footer-links">
+                <a href="{{ url_for('api_traffic_24') }}">Real-time traffic data</a>
+                </p>
+                <p class="footer-links">
+                <a href="{{ url_for('api_aqi_24') }}">Real-time air quality data</a>
+                </p>
+                <p class="footer-links">
+                <a href="{{ url_for('api_aqi_historic') }}">Historical air quality data</a>
+                </p>
+
+            </div>
+
+            </div>
+            <!-- Grid row -->
+
+        </div>
+        <!-- Footer Links -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2018 Copyright
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+
+    <!-- My JS -->
+    <!-- <script type="text/javascript" src="{{ url_for('static', filename='js/function.js') }}"></script> -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</body>
+</html>
